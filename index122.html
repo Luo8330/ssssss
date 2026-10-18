@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>张嘉禾的个人主页</title>
+
+
+  <style>
+    :root {
+      --bg: #0f1420;
+      --card: #171e2e;
+      --card-soft: #1d2639;
+      --text: #e6ebf4;
+      --text-dim: #9aa7bd;
+      --accent: #7c6cff;
+      --accent-2: #4dd6c1;
+      --border: #26314a;
+      --radius: 16px;
+      --nav-height: 64px;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-padding-top: var(--nav-height);
+
+    }
+
+    body {
+      margin: 0;
+      padding-top: var(--nav-height);
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 34px;
+
+      background: rgba(15, 20, 32, .82);
+
+      backdrop-filter: blur(10px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 15px;
+      letter-spacing: 1px;
+      transition: color .2s;
+    }
+
+    .nav a:hover {
+      color: var(--accent-2);
+    }
+
+
+
+    main {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 44px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      color: var(--accent);
+
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    main>h2 {
+      margin-top: 36px;
+    }
+
+
+    p {
+      margin: 0 0 12px;
+      color: var(--text-dim);
+    }
+
+    a {
+      color: var(--accent-2);
+    }
+
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-top: 28px;
+      padding: 30px;
+      background: var(--card-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .avatar {
+      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--accent);
+
+      color: #ffffff;
+      font-size: 44px;
+      line-height: 100px;
+      text-align: center;
+    }
+
+
+    .works {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .work {
+      flex: 1 1 240px;
+
+
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+      background: var(--card-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: transform .2s, border-color .2s;
+
+    }
+
+    .work:hover {
+      transform: translateY(-4px);
+
+      border-color: var(--accent);
+
+    }
+
+    .work a {
+      margin-top: auto;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+    .details,
+    .contact {
+
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer {
+      margin: 32px 0 0;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+
+    <a href="#home">首页</a>
+    <a href="#about">关于我</a>
+    <a href="#works">我的作品</a>
+    <a href="#contact">联系我</a>
+
+  </nav>
+
+  <main>
+
+    <header id="home">
+
+      <h1>个人简介</h1>
+  
+
+    </header>
+
+    <section class="profile" id="about">
+
+      <div class="avatar">张</div>
+
+
+      <div>
+        <h2>你好，我是张嘉禾</h2>
+        <p>我来自河南洛阳，我的专业是数据科学与大数据技术。</p>
+        <p>我的爱好是羽毛球、音乐、动漫、ow。</p>
+
+      </div>
+    </section>
+
+
+    <h2 id="works">我的作品</h2>
+
+    <section class="works">
+
+      <article class="work">
+        <h3>作品一</h3>
+        <p>个人主页</p>
+        <a href="#project-1">查看作品 →</a>
+      </article>
+
+      <article class="work">
+        <h3>作品二</h3>
+        <p>智能体。</p>
+        <a href="#project-2">查看作品 →</a>
+      </article>
+
+      <article class="work">
+        <h3>作品三</h3>
+        <p>暂无。</p>
+        <a href="#project-3">查看作品 →</a>
+      </article>
+
+    </section>
+
+
+    <section class="details">
+      <h2>作品详情</h2>
+
+      <h3 id="project-1">作品一</h3>
+      <!-- id="project-1" 对应卡片里的 href="#project-1" -->
+      <p>运用所学知识，结合AI工具完成个人主页</p>
+
+      <h3 id="project-2">作品二</h3>
+      <p>与队友运用HiAgent完成智能体搭建。</p>
+
+      <h3 id="project-3">作品三</h3>
+      <p>暂无。</p>
+    </section>
+
+    
+    <section class="contact" id="contact">
+      <h2>联系我</h2>
+      <p>如果你与我有相同爱好，欢迎与我交流。</p>
+      <p>
+        邮箱：3195371814@qq.com
+
+      </p>
+    </section>
+
+    <footer>我的个人主页 · 用 HTML + CSS 和AI工具制作</footer>
+  </main>
+
+</body>
+
+</html>
